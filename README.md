@@ -21,15 +21,17 @@
   planner_poly = TrajectoryPlanner3D('quintic_polynomial', waypoints=waypoints, time_scaling_gain=0.8)
   ```
 
-  ## Obtain all the waypoints of the trajectory in a period of time at a fixed time increment
+## Obtain all the waypoints of the trajectory in a period of time at a fixed time increment
   ```python
   trajctory_waypoints = planner.warm_start(dt=0.1, total_time=10) # list of [x, v, a, theta, omega, alpha]
   planner.animate(save=False) # only call this animate function after a warm_start
   ```
 
-  ## Get the desired trajectory waypoint at time t, given the current robot position.
+## Get the desired trajectory waypoint at time t, given the current robot position.
   - The adaptive time scaling will make the planner give a desired waypoint that is slowed down/sped up for the current robot position.
   - If `robot_pos = None`, then the raw desired waypoint at t is returned without scaling.
   ```python
   planner.get(t, robot_pos=robot_pos)
   ```
+
+## Check [This visualization video](https://github.com/Jarvis-X/wait-trajectory/blob/main/waitrajectory_demo.mp4)
