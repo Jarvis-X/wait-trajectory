@@ -1,4 +1,4 @@
-# A mini trajctory generator that wait for the robot.
+# A mini trajctory generator that waits for the robot.
 
 ## Initialization:
 - choose onr type of trajectory you want to use:
